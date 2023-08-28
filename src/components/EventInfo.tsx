@@ -6,7 +6,6 @@ interface IProps {
 }
 
 const EventInfo = ({ event }: IProps) => {
-  console.log("ven")
   return (
     <>
       <Typography>{event.description}</Typography>

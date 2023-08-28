@@ -29,8 +29,6 @@ const localizer = dateFnsLocalizer({
   locales,
 })
 
-export const generateId = () => (Math.floor(Math.random() * 10000) + 1).toString()
-
 export interface ITodo {
   _id: string
   title: string
@@ -55,6 +53,8 @@ export interface DatePickerEventFormData {
   start?: Date
   end?: Date
 }
+
+export const generateId = () => (Math.floor(Math.random() * 10000) + 1).toString()
 
 const initialEventFormState: EventFormData = {
   description: "",
@@ -146,7 +146,6 @@ const EventCalendar = () => {
     const newEvents = [...events, data]
 
     setEvents(newEvents)
-
     setDatePickerEventFormData(initialDatePickerEventFormData)
   }
 
