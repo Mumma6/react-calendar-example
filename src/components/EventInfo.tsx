@@ -1,5 +1,3 @@
-import React from "react"
-
 import { Typography } from "@mui/material"
 import { IEventInfo } from "./EventCalendar"
 
@@ -8,9 +6,10 @@ interface IProps {
 }
 
 const EventInfo = ({ event }: IProps) => {
+  console.log("ven")
   return (
     <>
-      <Typography variant="body2">{event.title}</Typography>
+      <Typography>{event.description}</Typography>
     </>
   )
 }
